@@ -1,0 +1,114 @@
+# Dependencies
+node_modules/
+*/node_modules/
+**/node_modules/
+
+# Next.js
+.next/
+out/
+frontend/.next/
+frontend/out/
+
+# Environment variables — NEVER commit real secrets
+.env
+.env.local
+.env.*.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+**/.env
+**/.env.local
+**/.env.*.local
+backend/.env
+frontend/.env
+frontend/.env.local
+
+# Docker Compose with real credentials
+# Use docker-compose.override.yml locally and keep docker-compose.yml secret-free
+docker-compose.yml
+docker-compose.override.yml
+docker-compose.prod.yml
+docker-compose.*.yml
+
+# SSL / TLS / private keys
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+id_rsa
+id_ed25519
+*.ppk
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# npm / yarn / pnpm caches
+.npm
+.pnpm-store/
+.yarn-integrity
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+
+# Optional REPL history
+.node_repl_history
+
+# Packed output
+*.tgz
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Docker
+*/Dockerfile
+*/.dockerignore
+
+# Build
+*/dist/
+*/build/
+dist/
+build/
+
+# Database
+*.sqlite
+*.db
+*.sqlite3
+
+# Temporary / scratch files
+scratch/
+tmp/
+temp/

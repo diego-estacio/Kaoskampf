@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* === CORES PRINCIPAIS (Kaoskampf - Dark + Purple) === */
+  --color-primary: #8b5cf6;
+  --color-primary-hover: #7c3aed;
+  --color-primary-dark: #6d28d9;
+  --color-primary-light: #2d1b6b;
+
+  /* === CORES NEUTRAS === */
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #a0aec0;
+  --color-text-tertiary: #718096;
+  --color-text-disabled: #4a5568;
+
+  --color-bg-primary: #1a1a2e; /* cards / modals */
+  --color-bg-secondary: #0f0f1a; /* main background */
+  --color-bg-sidebar: #12121f; /* sidebar / topbar */
+  --color-bg-elevated: #1e1e3a; /* hover / dividers */
+  --color-bg-tertiary: #16213e;
+
+  --color-border-light: #2d2d4e;
+  --color-border-medium: #3d3d5c;
+  --color-border-dark: #4a4a6a;
+
+  /* === CORES DE BOTÕES ESPECÍFICOS === */
+  --color-btn-primary: #8b5cf6;
+  --color-btn-primary-hover: #7c3aed;
+
+  --color-btn-success: #10b981;
+  --color-btn-success-hover: #059669;
+  --color-btn-success-light: #064e3b;
+  --color-btn-success-text: #6ee7b7;
+
+  --color-btn-contact: #10b981;
+  --color-btn-contact-hover: #059669;
+
+  /* === CORES DE STATUS/ESTADOS === */
+  --color-error: #f87171;
+  --color-error-hover: #ef4444;
+  --color-error-light: #3b1a1a;
+  --color-error-text: #fca5a5;
+
+  --color-warning: #fbbf24;
+  --color-warning-hover: #f59e0b;
+  --color-warning-light: #3b2a0a;
+  --color-warning-text: #fde68a;
+
+  /* === CORES ESPECÍFICAS DO SISTEMA === */
+  --color-linkedin: #8b5cf6;
+  --color-gradient-start: #7c3aed;
+  --color-gradient-end: #4f46e5;
+
+  /* === STATUS DE LEADS === */
+  --color-lead-hot: #10b981;
+  --color-lead-warm: rgb(255, 128, 0);
+  --color-lead-cold: #8b5cf6;
+  --color-lead-inactive: #f87171;
+
+  /* === GRADIENTES DE BACKGROUNDS PARA LEADS === */
+  --gradient-lead-hot: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.05) 0%,
+    rgba(16, 185, 129, 0.12) 100%
+  );
+  --gradient-lead-hot-hover: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.08) 0%,
+    rgba(16, 185, 129, 0.18) 100%
+  );
+  --gradient-lead-warm: linear-gradient(
+    135deg,
+    rgba(249, 161, 30, 0.05) 0%,
+    rgba(249, 161, 30, 0.12) 100%
+  );
+  --gradient-lead-warm-hover: linear-gradient(
+    135deg,
+    rgba(249, 161, 30, 0.08) 0%,
+    rgba(249, 161, 30, 0.18) 100%
+  );
+  --gradient-lead-cold: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.05) 0%,
+    rgba(139, 92, 246, 0.12) 100%
+  );
+  --gradient-lead-cold-hover: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.08) 0%,
+    rgba(139, 92, 246, 0.18) 100%
+  );
+  --gradient-lead-inactive: linear-gradient(
+    135deg,
+    rgba(248, 113, 113, 0.05) 0%,
+    rgba(248, 113, 113, 0.12) 100%
+  );
+  --gradient-lead-inactive-hover: linear-gradient(
+    135deg,
+    rgba(248, 113, 113, 0.08) 0%,
+    rgba(248, 113, 113, 0.18) 100%
+  );
+  --gradient-lead-default: linear-gradient(
+    135deg,
+    rgba(26, 26, 46, 0.8) 0%,
+    rgba(22, 33, 62, 1) 100%
+  );
+  --gradient-lead-default-hover: linear-gradient(
+    135deg,
+    rgba(26, 26, 46, 0.9) 0%,
+    rgba(22, 33, 62, 1) 100%
+  );
+
+  /* === CORES ADICIONAIS === */
+  --color-slate-100: #2d2d4e;
+  --color-slate-200: #3d3d5c;
+  --color-slate-500: #718096;
+
+  /* === CORES DE STATUS (BADGES) === */
+  --color-status-blue-bg: #1e3a5f;
+  --color-status-blue-text: #93c5fd;
+  --color-status-purple-bg: #2d1b6b;
+  --color-status-purple-text: #c4b5fd;
+  --color-status-yellow-bg: #3b2a0a;
+  --color-status-yellow-text: #fde68a;
+  --color-status-orange-bg: #3b1f0a;
+  --color-status-orange-text: #fdba74;
+  --color-status-green-bg: #064e3b;
+  --color-status-green-text: #6ee7b7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: #e2e8f0;
+  background: #0f0f1a;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4a4a6a #1a1a2e;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1a1a2e;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #4a4a6a;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
